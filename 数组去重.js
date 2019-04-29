@@ -1,6 +1,13 @@
 //es6 Set
 Array.from(new Set(arr));//arr 只去重的数组
 
+
+//针对多维数组去重，再排列。ps:ie浏览器不支持Array.flat
+Array.from(new Set(arr.flat(Infinity))).sort((a,b)=>{ return a-b});
+//ie下可以使用flat
+const flatSingle = arr => [].concat(...arr);
+
+
 //除此之外可用 indexOf()
 
 //
